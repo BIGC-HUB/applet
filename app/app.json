@@ -1,0 +1,19 @@
+{
+  "pages": [
+    "pages/group/group"
+  ],
+  "usingComponents": {
+    "sea-nav-bar": "./packages/nav-bar/nav-bar",
+    "sea-group-comment": "./packages/group-comment/group-comment"
+  },
+  "window": {
+    "navigationBarTitleText": "沙盒",
+    "navigationBarTextStyle": "black",
+    "navigationBarBackgroundColor": "#FFF",
+    "backgroundTextStyle": "light",
+    "navigationStyle": "custom",
+    "enablePullDownRefresh": false
+  },
+  "debug": true,
+  "sitemapLocation": "sitemap.json"
+}
