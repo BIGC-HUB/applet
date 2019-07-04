@@ -1,0 +1,79 @@
+@import '../iconfont.css';
+
+.card {
+  padding: 48rpx 0;
+
+  .type {
+    font-size: 28rpx;
+    font-weight: 600;
+    color: rgba(34, 82, 245, 0.69);
+  }
+
+  .title {
+    margin-top: 16rpx;
+    font-size: 40rpx;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 1);
+  }
+
+  .cover {
+    margin-top: 40rpx;
+    width: 670rpx;
+    height: 320rpx;
+  }
+
+  .footer {
+    margin-top: 40rpx;
+    display: flex;
+    justify-content: space-between;
+
+    .left {
+      .likes {
+        display: flex;
+
+        .like {
+          box-shadow: 0 2rpx 4rpx rgba(0, 0, 0, 0.12);
+          border: 3rpx solid rgba(255, 255, 255, 1);
+          border-radius: 50%;
+          width: 60rpx;
+          height: 60rpx;
+        }
+
+        .icon-comm-no_one {
+          font-size: 58rpx;
+          width: 60rpx;
+          height: 60rpx;
+          color: rgba(0, 0, 0, 0.6);
+        }
+      }
+
+      .tip {
+        margin-top: 16rpx;
+        font-size: 28rpx;
+        font-family: Helvetica;
+        color: rgba(0, 0, 0, 0.6);
+      }
+    }
+
+    .right {
+      .btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 262rpx;
+        height: 96rpx;
+        background: rgba(93, 136, 247, 1);
+        border-radius: 48rpx;
+        opacity: 0.9506999999999999;
+        font-size: 32rpx;
+        font-family: PingFangSC-Medium;
+        font-weight: 500;
+        color: rgba(255, 255, 255, 1);
+      }
+
+      .btn.joined {
+        opacity: 0.40130000000000005;
+      }
+    }
+  }
+}
