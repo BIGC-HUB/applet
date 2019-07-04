@@ -1,7 +1,6 @@
 page {
   padding: 0 40rpx;
   width: 100%;
-  box-sizing: border-box;
 }
 
 main {

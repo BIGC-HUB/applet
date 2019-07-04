@@ -26,23 +26,22 @@ const compress = function(v_old) {
 }
 
 // Files have all started watching
-gaze.on('ready', watcher => {})
+gaze.on('ready', (watcher) => {})
 
 // A file has been added/changed/deleted has occurred
 gaze.on('all', (name, filepath) => {
   console.log('event', name)
   if (name === 'changed' || name === 'added') {
     const str = fs.readFileSync(filepath, 'utf8')
-    stylus(str)
-      .render((err, css) => {
-        if (err) {
-          console.log('>>>', err.message)
-        } else {
-          let path = filepath.replace('.stylus', '.wxss')
-          css = css.replace('.css', '.wxss')
-          fs.writeFileSync(path, compress(css), 'utf8')
-          console.log(path.split('\\').slice(-1)[0], Date().toString())
-        }
-      })
+    stylus(str).render((err, css) => {
+      if (err) {
+        console.log('>>>', err.message)
+      } else {
+        let path = filepath.replace('.stylus', '.wxss')
+        css = css.replace('.css', '.wxss')
+        fs.writeFileSync(path, compress(css), 'utf8')
+        console.log(path.split('\\').slice(-1)[0])
+      }
+    })
   }
 })
