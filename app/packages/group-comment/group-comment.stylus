@@ -1,5 +1,9 @@
 @import '../iconfont.css';
 
+.group-comment {
+	width: 100%;
+}
+
 // 留言
 .leave-message {
 	font-size: 14px;

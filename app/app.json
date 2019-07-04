@@ -5,6 +5,7 @@
   ],
   "usingComponents": {
     "sea-nav-bar": "./packages/nav-bar/nav-bar",
+    "sea-group-card": "./packages/group-card/group-card",
     "sea-group-comment": "./packages/group-comment/group-comment"
   },
   "window": {

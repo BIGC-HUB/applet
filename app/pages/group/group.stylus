@@ -9,7 +9,3 @@ main {
   height: 300px;
   width: 100%;
 }
-
-sea-group-comment {
-  width: 100%;
-}
