@@ -1,0 +1,2 @@
+# applet
+SandBox
