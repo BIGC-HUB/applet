@@ -1,4 +1,3 @@
-<sea-nav-bar />
 <sea-group-card type="#投票" />
 <sea-group-card type="#问作者" />
 <sea-group-card type="#征集" />

@@ -83,5 +83,9 @@ Component({
     card: null,
   },
   attached() {},
-  methods: {},
+  methods: {
+    bindGroup() {
+      util.path('pages/group/group')
+    },
+  },
 })

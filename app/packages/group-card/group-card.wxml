@@ -1,7 +1,7 @@
 <div class="card" wx:if="{{card}}">
   <div class="type">{{card.type}}</div>
-  <div class="title">{{card.title}}</div>
-  <div class="cover">
+  <div class="title" bind:tap="bindGroup">{{card.title}}</div>
+  <div class="cover" bind:tap="bindGroup">
     <image mode="aspectFill" src="{{card.cover}}" />
   </div>
   <div class="footer">
@@ -26,7 +26,9 @@
       </div>
     </div>
     <div class="right">
-      <div class="btn {{card.joined ? 'joined' : ''}}">{{card.joined ? '已' : '立即'}}{{card.btn}}</div>
+      <div bind:tap="bindGroup" class="btn {{card.joined ? 'joined' : ''}}">
+        {{card.joined ? '已' : '立即'}}{{card.btn}}
+      </div>
     </div>
   </div>
 </div>
