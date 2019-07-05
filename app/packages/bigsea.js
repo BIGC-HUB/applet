@@ -5,6 +5,12 @@ const config = {
 module.exports = {
   config: config,
   system: wx.getSystemInfoSync(),
+  type(obj) {
+    return Object.prototype.toString
+      .call(obj)
+      .slice(8, -1)
+      .toLowerCase()
+  },
   price(n) {
     return this.float(Number(n) / 100)
   },
@@ -21,7 +27,7 @@ module.exports = {
     if (!req.url.startsWith('http')) {
       req.url = config.host + req.url
     }
-    return new Promise(success => {
+    return new Promise((success) => {
       const request = () => {
         wx.request({
           url: req.url,
