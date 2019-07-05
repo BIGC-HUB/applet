@@ -1,6 +1,6 @@
 const log = console.log.bind(console, '>>>')
 const config = {
-  host: 'https://api.echo1999.com',
+  host: 'https://api.bigsea.cc',
 }
 module.exports = {
   config: config,
@@ -183,70 +183,5 @@ module.exports = {
       content: content || '',
       success: callback || function() {},
     })
-  },
-  formatProvince(province) {
-    const arr = ['省', '自治区', '市']
-    for (const e of arr) {
-      if (province.endsWith(e)) {
-        return province.replace(e, '')
-      }
-    }
-    return province
-  },
-  formatCity(city) {
-    const arr = ['市', '自治州', '州', '地区', '盟', '县']
-    for (const e of arr) {
-      if (city.endsWith(e)) {
-        return city.replace(e, '')
-      }
-    }
-    return city
-  },
-  formatContent(content) {
-    let step = 0
-    let str = ''
-    for (let s of content) {
-      if (s === '\n') {
-        // 清零
-        step = 0
-      } else {
-        step++
-      }
-      if (step === 21) {
-        s = s + '\n'
-        step = 0
-      }
-      str = str + s
-    }
-    return str
-  },
-  getKilometers(A, B) {
-    const EARTH_RADIUS = 6378137.0 //单位 m
-    let f = (Math.PI * ((A.lat + B.lat) / 2)) / 180.0
-    let g = (Math.PI * ((A.lat - B.lat) / 2)) / 180.0
-    let l = (Math.PI * ((A.lng - B.lng) / 2)) / 180.0
-    let sg = Math.sin(g)
-    let sl = Math.sin(l)
-    let sf = Math.sin(f)
-    let s, c, w, r, d, h1, h2
-    let a = EARTH_RADIUS
-    let fl = 1 / 298.257
-    sg = sg * sg
-    sl = sl * sl
-    sf = sf * sf
-    s = sg * (1 - sl) + (1 - sf) * sl
-    c = (1 - sg) * (1 - sl) + sf * sl
-    w = Math.atan(Math.sqrt(s / c))
-    r = Math.sqrt(s * c) / w
-    d = 2 * w * a
-    h1 = (3 * r - 1) / 2 / c
-    h2 = (3 * r + 1) / 2 / s
-    let meter = d * (1 + fl * (h1 * sf * (1 - sg) - h2 * (1 - sf) * sg)) || 0
-    meter = Math.round(meter)
-    if (meter < 1000) {
-      return String(meter) + 'm'
-    } else {
-      return String(parseFloat((meter / 1000).toFixed(1))) + 'km'
-    }
   },
 }
