@@ -37,13 +37,14 @@
           border-radius: 50%;
           width: 60rpx;
           height: 60rpx;
+          margin-right: -12rpx;
         }
 
         .icon-comm-no_one {
           font-size: 58rpx;
           width: 60rpx;
           height: 60rpx;
-          color: rgba(0, 0, 0, 0.6);
+          color: rgba(0, 0, 0, 0.4);
         }
       }
 
