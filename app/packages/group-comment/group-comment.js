@@ -238,10 +238,21 @@ Component({
       const i2 = event.currentTarget.dataset.i2
       const typeNew = event.currentTarget.dataset.new
       const e = typeNew ? this.data.listNew[i] : this.data.listFeatured[i]
-      if (i2 !== undefined) {
-        console.log('🐸', e.comments[i2].who)
+      // 一级评论
+      let name = e.user.name
+      if (e.user.isAdmin) {
+        name = name + '（发起人）'
       }
-      util.tip('去评论页')
+      // 二级评论
+      if (util.has(e, `comments[${i2}].who.name`)) {
+        name = e.comments[i2].who.name
+        if (e.comments[i2].who.isAdmin) {
+          name = name + '（发起人）'
+        }
+      }
+      util.path('/pages/group/groupComment', {
+        at: name
+      })
     },
     initLike(like, type) {
       let head = this.data.userInfo.head

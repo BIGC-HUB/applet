@@ -1,7 +1,7 @@
 <sea-nav-bar />
 
 <div class="comment">
-  <textarea placeholder="有何看法，展开讲讲" placeholder-class="textarea-placeholder"></textarea>
+  <textarea placeholder="{{placeholder}}" placeholder-class="textarea-placeholder"></textarea>
   <i class="iconfont icon-icon-photo"></i>
 </div>
 <div class="submit">
