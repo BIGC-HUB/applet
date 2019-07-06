@@ -4,12 +4,6 @@ page {
   background: rgb(240, 242, 245);
 }
 
-main {
-  display: block;
-  height: 300px;
-  width: 100%;
-}
-
 .to-group-comment {
   position: fixed;
   bottom: 0;

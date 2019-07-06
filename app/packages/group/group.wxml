@@ -1,0 +1,26 @@
+<div class="card" wx:if="{{card.type}}">
+  <div class="type">{{card.type}}</div>
+  <div class="title">{{card.title}}</div>
+  <div class="content">{{card.content}}</div>
+  <div class="likes">
+    <block wx:for="{{card.likes}}" wx:key="{{index}}">
+      <image
+        wx:if="{{index < 6}}"
+        class="like"
+        mode="aspectFill"
+        src="{{item}}"
+      />
+    </block>
+    <i
+      wx:if="{{card.likes.length === 0}}"
+      class="iconfont icon-comm-no_one"
+    ></i>
+  </div>
+  <div class="tip">
+    <text wx:if="{{card.likes.length === 0}}">还没有人参与</text>
+    <text wx:else>已有 {{card.likes.length}} 人参与</text>
+  </div>
+  <div class="btn {{card.joined ? 'joined' : ''}}">
+    {{card.joined ? '已' : '立即'}}{{card.btn}}
+  </div>
+</div>

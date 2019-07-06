@@ -57,7 +57,7 @@ Component({
             'http://statics03.qingmang.mobi/image/proxy/aHR0cHMlM0EvL3d4LnFsb2dvLmNuL21tb3Blbi92aV8zMi9QaWFqeFNxQlJhRUlVa3I5SDNxb0lJQXJodENmMXp5ZXVoYzhpY1J0VGUxY1JuMUkwT2R0WVFmUEVKaWN2VVl0SzdFdDdXMEYwYU5CTDJYbDkwb3RZUjFyQS8xMzI=',
           ],
           btn: '参与',
-          joined: true,
+          joined: false,
         })
       } else if (nv === '#讨论') {
         card = Object.assign(card, {
@@ -85,7 +85,9 @@ Component({
   attached() {},
   methods: {
     bindGroup() {
-      util.path('pages/group/group')
+      util.path('pages/group/group', {
+        type: this.data.card.type
+      })
     },
   },
 })
