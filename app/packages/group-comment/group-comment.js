@@ -233,7 +233,7 @@ Component({
         },
       })
     },
-    bindComment(event) {
+    bindToComment(event) {
       const i = event.currentTarget.dataset.i
       const i2 = event.currentTarget.dataset.i2
       const typeNew = event.currentTarget.dataset.new
