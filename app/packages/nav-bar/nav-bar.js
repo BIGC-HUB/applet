@@ -5,6 +5,9 @@ Component({
     addGlobalClass: false,
   },
   properties: {
+    air: {
+      type: Boolean,
+    },
     theme: {
       type: String,
     },

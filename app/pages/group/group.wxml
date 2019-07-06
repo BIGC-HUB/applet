@@ -1,4 +1,4 @@
-<sea-nav-bar />
+<sea-nav-bar air="{{true}}" />
 <sea-group type="{{type}}" />
 <sea-group-comment />
 
