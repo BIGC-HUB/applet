@@ -1,5 +1,5 @@
 <sea-nav-bar air="{{true}}" />
-<sea-group type="{{type}}" />
+<sea-group-content card="{{card}}" />
 <sea-group-comment />
 
 <div class="to-group-comment">

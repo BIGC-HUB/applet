@@ -6,8 +6,8 @@
   ],
   "usingComponents": {
     "sea-nav-bar": "./packages/nav-bar/nav-bar",
-    "sea-group": "./packages/group/group",
     "sea-group-card": "./packages/group-card/group-card",
+    "sea-group-content": "./packages/group-content/group-content",
     "sea-group-comment": "./packages/group-comment/group-comment"
   },
   "window": {
