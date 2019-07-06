@@ -92,8 +92,8 @@
 				.img {
 					width: 160rpx;
 					height: 160rpx;
-					margin-top: 24rpx;
-					margin-right: 24rpx;
+					margin-top: 16rpx;
+					margin-right: 16rpx;
 					background: #eee;
 				}
 
@@ -107,16 +107,14 @@
 				}
 
 				.img4 {
-					width: 240rpx;
-					height: 240rpx;
 				}
 
 				.img4:nth-of-type(3n) {
-					margin-right: 24rpx;
+					margin-right: 16rpx;
 				}
 
 				.img4:nth-of-type(2n) {
-					margin-right: 0;
+					margin-right: 200rpx;
 				}
 			}
 		}

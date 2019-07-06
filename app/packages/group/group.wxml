@@ -1,4 +1,7 @@
 <div class="card" wx:if="{{card.type}}">
+  <!-- <div class="cover">
+    <image class="img" mode="aspectFill" src="{{card.cover}}" />
+  </div> -->
   <div class="type">{{card.type}}</div>
   <div class="title">{{card.title}}</div>
   <div class="content">{{card.content}}</div>
