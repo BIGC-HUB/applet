@@ -2,7 +2,13 @@
 <main></main>
 <sea-group-comment />
 
-
 <div class="to-group-comment">
-
+  <div class="left" bind:tap="bindToComment">
+    <i class="iconfont icon-icon-photo"></i>
+    <text>有何看法，展开讲讲</text>
+  </div>
+  <button class="right" open-type="share">
+    <i class="iconfont icon-comm-wechat"></i>
+    <text>分享</text>
+  </button>
 </div>

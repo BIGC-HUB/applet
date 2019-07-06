@@ -1,7 +1,8 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/group/group"
+    "pages/group/group",
+    "pages/group/groupComment"
   ],
   "usingComponents": {
     "sea-nav-bar": "./packages/nav-bar/nav-bar",

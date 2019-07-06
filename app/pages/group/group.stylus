@@ -1,7 +1,7 @@
 page {
-  padding: 0 40rpx;
+  padding: 0 40rpx 178rpx;
   width: 100%;
-  background: rgba(0, 0, 0, 0.07);
+  background: rgb(240, 242, 245);
 }
 
 main {
@@ -21,4 +21,43 @@ main {
   width: 100%;
   height: 128rpx;
   background: rgba(255, 255, 255, 1);
+
+  .left {
+    width: 486rpx;
+    height: 72rpx;
+    background: rgba(0, 0, 0, 0.07);
+    border-radius: 36rpx;
+    font-size: 28rpx;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    padding-left: 32rpx;
+
+    .iconfont {
+      font-size: 44rpx;
+      margin-right: 24rpx;
+    }
+  }
+
+  .right {
+    margin-left: 24rpx;
+    width: 168rpx;
+    height: 74rpx;
+    background: rgba(255, 255, 255, 0.04);
+    border-radius: 37rpx;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    font-size: 28rpx;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .iconfont {
+      font-size: 42rpx;
+      color: rgba(130, 189, 90, 1);
+      margin-right: 8rpx;
+    }
+  }
 }
