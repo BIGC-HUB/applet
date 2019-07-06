@@ -87,11 +87,17 @@
   <div class="comments-like">
     <div class="left">
       <div class="heads">
-        <block wx:for="{{e.like}}" wx:for-item="src" wx:key="{{index}}">
-          <image class="head" mode="aspectFill" src="{{src}}" />
+        <block wx:for="{{e.likes}}" wx:for-item="src" wx:key="{{index}}">
+          <image
+            wx:if="{{index < 3}}"
+            class="head"
+            mode="aspectFill"
+            src="{{src}}"
+            style="z-index:{{3 - index}}"
+          />
         </block>
       </div>
-      <div>{{e.likePerson}} 人点赞</div>
+      <div>{{e.likes.length}} 人点赞</div>
     </div>
     <div class="right">
       <i

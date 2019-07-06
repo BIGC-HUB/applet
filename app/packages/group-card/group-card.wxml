@@ -13,6 +13,7 @@
             class="like"
             mode="aspectFill"
             src="{{item}}"
+            style="z-index:{{6 - index}}"
           />
         </block>
         <i
